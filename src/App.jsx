@@ -89,8 +89,18 @@ function handleSelectSquare(rowIndex, colIndex){
 
     <div id="game-container">
       <ol id="players" className="highlight-player">
-       <Player initialName= "Player 1" symbol="X" isActive = {activeplayer === 'X'} onchangeName = {handlePlayerNameChange}/>
-       <Player initialName= "Player 2" symbol="O" isActive = {activeplayer === 'O'} onchangeName = {handlePlayerNameChange}/>
+       <Player 
+        initialName= "Player 1" 
+        symbol="X" isActive = {activeplayer === 'X'} 
+        onchangeName = {handlePlayerNameChange}
+      />
+
+       <Player 
+        initialName= "Player 2" 
+        symbol="O" isActive = {activeplayer === 'O'} 
+        onchangeName = {handlePlayerNameChange}
+      />
+      
       </ol>
       {(winner || hasDraw) && <GameOver winner={winner} onRestart={handleRestart}/>}
       <GameBoard 
